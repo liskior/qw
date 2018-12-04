@@ -99,14 +99,8 @@ pipeline {
                     steps {
                         script {
                             key = createSubTask(release_key)
-                            try {
-                                sonaTypeCheck()
-                                resolveTask(key)
-                            } catch (Exception e) {
-                                echo "Very often occurs an authentication error by SonaType, wtf???"
-                            }
-
-
+                            sonaTypeCheck()
+                            resolveTask(key)
                         }
                     }
 
