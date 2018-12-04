@@ -6,7 +6,7 @@ import com.gotomeeting.jirasupport.JiraSupport
 
 
 @NonCPS
-def createTask() {
+def call() {
     JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
     release_key = CreateIssue.createIssue(jiraSupport, project_key, project_key + version, description)
     println(IssueInfo.getIssueLink(jiraSupport, release_key))
