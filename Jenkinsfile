@@ -16,7 +16,6 @@
 ])*/
 
 @Library('qw')_
-import com.gotomeeting.jirasupport.*
 
 import groovy.json.JsonSlurper
 
@@ -115,17 +114,8 @@ pipeline {
                 stage("Perform JIRA Check for critical issues") {
                     steps {
                         script {
-                            JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
                             key = createSubTask(release_key)
-                            /*println(IssueInfo.getIssueLink(jiraSupport, key))
-                            try {
-                                for (String issue : CheckCriticalIssues.checkCriticalIssues(jiraSupport, jira_component_name)) {
-                                    println(issue)
-                                }
-                            } catch (Exception e) {
-                                echo e.message
-                            }*/
-
+                            checkCritical()
                             resolveTask(key)
                         }
                     }
