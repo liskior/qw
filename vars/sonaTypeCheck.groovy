@@ -1,6 +1,6 @@
 package vars
 
-import com.gotomeeting.sonatype.*
+import com.gotomeeting.sonatypesupport.*
 
 def call() {
     try {
