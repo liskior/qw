@@ -72,56 +72,58 @@ pipeline {
     }
     stages {
         stage('grab') {
-            steps { grab() }
-            stage('Create Release Ticket') {
-                steps {
-                    script {
-                        release_key = createTask()
-                    }
-                }
+            steps {
+                grab()
             }
-            stage("p3") {
-                parallel {
-                    stage("Perform JIRA Check for critical issues") {
-                        steps {
-                            script {
-                                key = createSubTask(release_key)
-                                checkCritical()
-                                resolveTask(key)
-                            }
-                        }
-
-                    }
-                    stage("Perform SonaType Checks") {
-                        steps {
-                            script {
-                                key = createSubTask(release_key)
-                                try {
-                                    sonaTypeCheck()
-                                    resolveTask(key)
-                                } catch (Exception e) {
-                                    echo "Very often occurs an authentication error by SonaType, wtf???"
-                                }
-
-
-                            }
-                        }
-
-                    }
-                }
-            }
-
-            stage("Run BAT against ED") {
-                steps {
-                    script {
-                        key = createSubTask(release_key)
-                        jenkinsBuild(test)
-                        resolveTask(key)
-                    }
-                }
-            }
-
         }
+        stage('Create Release Ticket') {
+            steps {
+                script {
+                    release_key = createTask()
+                }
+            }
+        }
+        stage("p3") {
+            parallel {
+                stage("Perform JIRA Check for critical issues") {
+                    steps {
+                        script {
+                            key = createSubTask(release_key)
+                            checkCritical()
+                            resolveTask(key)
+                        }
+                    }
+
+                }
+                stage("Perform SonaType Checks") {
+                    steps {
+                        script {
+                            key = createSubTask(release_key)
+                            try {
+                                sonaTypeCheck()
+                                resolveTask(key)
+                            } catch (Exception e) {
+                                echo "Very often occurs an authentication error by SonaType, wtf???"
+                            }
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+
+        stage("Run BAT against ED") {
+            steps {
+                script {
+                    key = createSubTask(release_key)
+                    jenkinsBuild(test)
+                    resolveTask(key)
+                }
+            }
+        }
+
 
         stage('Create Release Candidate') {
             steps {
