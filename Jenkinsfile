@@ -1,20 +1,3 @@
-/*@Grapes([
-        //,
-        //@Grab(group = 'com.gotomeeting.builds', module = 'jirasupport', version= '1.0.30-SNAPSHOT'),
-        //@Grab(group = 'com.gotomeeting.builds', module = 'sonatypesupport', version = '1.0.1-SNAPSHOT'),
-        @GrabExclude('com.sun.xml.bind:jaxb-impl'),
-        @GrabExclude('com.atlassian.sal:sal-api'),
-        @GrabExclude('org.apache.httpcomponents:httpcore'),
-        @GrabExclude('com.octo.captcha#jcaptcha;2.0-alpha-1'),
-        @GrabExclude('org.apache.httpcomponents:httpclient'),
-        @GrabExclude('org.codehaus.groovy:groovy-all:2.4.11'),
-        @GrabExclude('com.atlassian.jira#atlassian-jira;6.0'),
-        @GrabExclude('com.atlassian.jira#atlassian-jira;6.0'),
-        @GrabExclude('joda-time:joda-time:2.1'),
-        @GrabExclude('com.atlassian.httpclient#atlassian-httpclient-library;1.0.0')
-
-])*/
-
 @Library('qw')_
 
 import groovy.json.JsonSlurper
@@ -61,20 +44,6 @@ def jenkinsBuild(String url) {
     }
 }
 
-/*@NonCPS
-def createRelease(oldReleaseId) {
-    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
-    RefactorItem.refactorReleaseName(jiraSupport, oldReleaseId, "test rename")
-    releaseId = CreateRelease.createRelease(jiraSupport, project_key, project_key + " NEXT RELEASE" + Math.random(), description, "2018-09-15")
-    return releaseId
-}
-
-@NonCPS
-def assignIssue(key) {
-    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
-    RefactorItem.assignIssue(jiraSupport, key, assign_name)
-}*/
-
 
 pipeline {
     agent any
@@ -99,61 +68,56 @@ pipeline {
         string(name: 'end_date', defaultValue: "25.08.2020")
         string(name: 'PACKAGE_NAME', defaultValue: 'bla')
         string(name: 'assign_name', defaultValue: 'joergv')
+        string(name: 'old_release_id', defaultValue: '40242')
     }
     stages {
-        stage('grab'){steps{grab()}}
-        stage('Create Release Ticket') {
-            steps {
-                script {
-                    release_key = createTask()
+        stage('grab') {
+            steps { grab() }
+            stage('Create Release Ticket') {
+                steps {
+                    script {
+                        release_key = createTask()
+                    }
                 }
             }
-        }
-        /*stage("p3") {
-            parallel {*/
-                stage("Perform JIRA Check for critical issues") {
-                    steps {
-                        script {
-                            key = createSubTask(release_key)
-                            checkCritical()
-                            resolveTask(key)
-                        }
-                    }
-
-                }
-                /*stage("Perform SonaType Checks") {
-                    steps {
-                        script {
-                            //key = createSubTask(release_key)
-                            try {
-                                SonaTypeSupport sonaTypeSupport = new SonaTypeSupport(ACCESS_USR, ACCESS_PSW, SONA_URL)
-                                println(sonaTypeSupport.getThreatLevel(sona_hash))
-                                //resolveTask(key)
-                            } catch (Exception e) {
-                                echo "Very often occures an authentificatin error, wtf???"
+            stage("p3") {
+                parallel {
+                    stage("Perform JIRA Check for critical issues") {
+                        steps {
+                            script {
+                                key = createSubTask(release_key)
+                                checkCritical()
+                                resolveTask(key)
                             }
-
-
                         }
+
                     }
+                    stage("Perform SonaType Checks") {
+                        steps {
+                            script {
+                                key = createSubTask(release_key)
+                                try {
+                                    sonaTypeCheck()
+                                    resolveTask(key)
+                                } catch (Exception e) {
+                                    echo "Very often occurs an authentication error by SonaType, wtf???"
+                                }
 
-                }*/
-            //}
-        //}
 
-        /*stage("Run BAT against ED") {
-            steps {
-                script {
-                    try {
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            stage("Run BAT against ED") {
+                steps {
+                    script {
                         key = createSubTask(release_key)
                         jenkinsBuild(test)
                         resolveTask(key)
-                    } catch (Exception e) {
-                        echo e
-                        echo e.message
                     }
-
-
                 }
             }
 
@@ -172,7 +136,7 @@ pipeline {
         }
 
 
-        stage ("p7") {
+        stage("p7") {
             parallel {
                 stage("Deploy RC") {
                     steps {
@@ -181,7 +145,9 @@ pipeline {
                             echo "/opt/ibmrationalsoftware/bftrigger.pl MeetingService_OS_-_ED true MeetingServiceOSBase ${PACKAGE_NAME}"
                             echo "${PACKAGE_NAME}"
                             shell '''sed -r '/environment->getEntry/ s/"((Rollback)?Package)"/"ED\1"/' /opt/ibmrationalsoftware/bftrigger.pl > mybftrigger.pl'''
-                            shell """/usr/bin/perl ./mybftrigger.pl "ScreenSharingService_OS_-_ED" true "ScreenSharingServiceOSBase" ${PACKAGE_NAME}"""
+                            shell """/usr/bin/perl ./mybftrigger.pl "ScreenSharingService_OS_-_ED" true "ScreenSharingServiceOSBase" ${
+                                PACKAGE_NAME
+                            }"""
                             resolveTask(key)
                         }
                     }
@@ -191,7 +157,7 @@ pipeline {
                     steps {
                         script {
                             key = createSubTask(release_key)
-                            release_id = createRelease("39350")
+                            release_id = createRelease(old_release_name)
                             resolveTask(key)
 
                         }
@@ -219,14 +185,8 @@ pipeline {
         stage("Create OPS deployment ticket") {
             steps {
                 script {
-                    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
                     key = createSubTask(release_key)
-
-
-                    CreateIssue.createDeployment(jiraSupport, "WDO", "Deploy $jira_component_name to stage", description, new Date(), new Date(),
-                            IssueInfo.getIssueLink(jiraSupport, project_key), "Live")
-                    CreateIssue.createDeployment(jiraSupport, "WDO", "Deploy $jira_component_name to stage", description, new Date(), new Date(),
-                            IssueInfo.getIssueLink(jiraSupport, project_key), "Stage")
+                    createDeployment()
                     resolveTask(key)
                 }
             }
@@ -261,13 +221,12 @@ pipeline {
             steps {
                 script {
                     key = createSubTask(release_key)
-                    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
-                    ReleaseRelease.releaseRelease(jiraSupport, project_key, "39357")
-                      resolveTask(key)
+                    releaseRelease()
+                    resolveTask(key)
                 }
             }
 
-        }*/
+        }
     }
-}
 
+}

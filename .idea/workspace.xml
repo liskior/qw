@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca35f8c7-04fb-44f9-86d6-0c40ef518c58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/vars/createSubTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createSubTask.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/createTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createTask.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/resolveTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/resolveTask.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vars/grab.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/grab.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,47 +18,17 @@
       <file leaf-file-name="createTask.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vars/createTask.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="180">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resolveTask.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vars/resolveTask.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createSubTask.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vars/createSubTask.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grab.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vars/grab.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="504">
+              <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -76,11 +45,15 @@
         <option value="$PROJECT_DIR$/src/JIraSupport.groovy" />
         <option value="$PROJECT_DIR$/src/vars/йц.groovy" />
         <option value="$PROJECT_DIR$/vars/qw.groovy" />
-        <option value="$PROJECT_DIR$/vars/grab.groovy" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/vars/createTask.groovy" />
         <option value="$PROJECT_DIR$/vars/resolveTask.groovy" />
+        <option value="$PROJECT_DIR$/vars/checkCritical.groovy" />
         <option value="$PROJECT_DIR$/vars/createSubTask.groovy" />
+        <option value="$PROJECT_DIR$/vars/grab.groovy" />
+        <option value="$PROJECT_DIR$/vars/assignIssue.groovy" />
+        <option value="$PROJECT_DIR$/vars/createRelease.groovy" />
+        <option value="$PROJECT_DIR$/vars/sonaTypeCheck.groovy" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
@@ -99,7 +72,9 @@
     <option name="width" value="1936" />
     <option name="height" value="1176" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -209,15 +184,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543843708762</updated>
-      <workItem from="1543843710388" duration="4078000" />
+      <workItem from="1543843710388" duration="5368000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4078000" />
+    <option name="totallyTimeSpent" value="5368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -230,11 +206,11 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.4989339" visible="true" weight="0.32950193" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4989339" visible="true" weight="0.32950193" />
       <window_info id="Capture Tool" />
       <window_info anchor="right" id="Jenkins" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32950193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -271,41 +247,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+    <entry file="file://$PROJECT_DIR$/vars/createSubTask.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vars/createTask.groovy">
+    <entry file="file://$PROJECT_DIR$/vars/grab.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="95" selection-start-line="4" selection-start-column="95" selection-end-line="4" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vars/resolveTask.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vars/resolveTask.groovy">
+    <entry file="file://$PROJECT_DIR$/vars/checkCritical.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vars/createSubTask.groovy">
+    <entry file="file://$PROJECT_DIR$/vars/createTask.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="180">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vars/grab.groovy">
+    <entry file="file://$PROJECT_DIR$/vars/assignIssue.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vars/createRelease.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vars/sonaTypeCheck.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="70" column="56" selection-start-line="70" selection-start-column="56" selection-end-line="70" selection-end-column="56" />
         </state>
       </provider>
     </entry>
