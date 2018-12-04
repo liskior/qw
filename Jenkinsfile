@@ -101,6 +101,7 @@ pipeline {
         string(name: 'assign_name', defaultValue: 'joergv')
     }
     stages {
+        stage('grab'){steps{grab()}}
         stage('Create Release Ticket') {
             steps {
                 script {
