@@ -62,19 +62,6 @@ def jenkinsBuild(String url) {
 }
 
 /*@NonCPS
-def createSubTask(release_key) {
-    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
-    key = CreateIssue.createIssue(jiraSupport, project_key, env.STAGE_NAME, "bla", release_key)
-    return key
-}*/
-
-/*@NonCPS
-def resolveTask(key) {
-    JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
-    DoStatusTransition.doStatusTransition(jiraSupport, key, TransitionStatus.START_PROGRESS)
-}
-
-@NonCPS
 def createRelease(oldReleaseId) {
     JiraSupport jiraSupport = new JiraSupport(ACCESS_USR, ACCESS_PSW, JIRA_URL)
     RefactorItem.refactorReleaseName(jiraSupport, oldReleaseId, "test rename")
