@@ -1,3 +1,5 @@
+package vars
+
 import com.gotomeeting.jirasupport.*
 @NonCPS
 def call(release_key) {
