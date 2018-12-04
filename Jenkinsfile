@@ -223,7 +223,7 @@ pipeline {
             steps {
                 script {
                     key = createSubTask(release_key)
-                    releaseRelease()
+                    releaseRelease(release_id)
                     resolveTask(key)
                 }
             }
