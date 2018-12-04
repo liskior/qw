@@ -109,7 +109,7 @@ pipeline {
             }
         }
         /*stage("p3") {
-            parallel {
+            parallel {*/
                 stage("Perform JIRA Check for critical issues") {
                     steps {
                         script {
@@ -128,7 +128,7 @@ pipeline {
                         }
                     }
 
-                }*/
+                }
                 /*stage("Perform SonaType Checks") {
                     steps {
                         script {
