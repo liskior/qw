@@ -5,6 +5,6 @@ package vars
 import com.gotomeeting.jirasupport.JiraSupport
 
 
-call() {
+def call() {
     JiraSupport jiraSupport = new JiraSupport("qw", "qw", "qw")
 }
