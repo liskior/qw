@@ -9,9 +9,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="groovy-2.4.15" level="application" />
     <orderEntry type="module-library">
-      <library name="Grab:jirasupport-1.0.30-SNAPSHOT.jar">
+      <library name="Grab:jirasupport-1.0.32-SNAPSHOT.jar">
         <CLASSES>
-          <root url="jar://$USER_HOME$/.groovy/grapes/com.gotomeeting.builds/jirasupport/jars/jirasupport-1.0.30-SNAPSHOT.jar!/" />
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.gotomeeting.builds/jirasupport/jars/jirasupport-1.0.32-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -291,6 +291,69 @@
       <library name="Grab:auto-value-annotations-1.6.2.jar">
         <CLASSES>
           <root url="jar://$USER_HOME$/.groovy/grapes/com.google.auto.value/auto-value-annotations/jars/auto-value-annotations-1.6.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:sonatypesupport-1.0.1-SNAPSHOT.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.gotomeeting.builds/sonatypesupport/jars/sonatypesupport-1.0.1-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:slack-webhook-1.4.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/net.gpedro.integrations.slack/slack-webhook/jars/slack-webhook-1.4.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:gson-2.3.1.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.google.code.gson/gson/jars/gson-2.3.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:jirasupport-1.0.32-SNAPSHOT.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/com.gotomeeting.builds/jirasupport/jars/jirasupport-1.0.32-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:maven-artifact-3.6.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.apache.maven/maven-artifact/jars/maven-artifact-3.6.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:plexus-utils-3.1.0.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.codehaus.plexus/plexus-utils/jars/plexus-utils-3.1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Grab:commons-lang3-3.8.1.jar">
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.groovy/grapes/org.apache.commons/commons-lang3/jars/commons-lang3-3.8.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
