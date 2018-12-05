@@ -3,12 +3,13 @@ package vars
 @GrabResolver(name = 'com.gotomeeting.builds', root = 'https://artifactory.prodwest.citrixsaassbe.net/artifactory/libs-snapshot-local/')
 @Grab(group='com.gotomeeting.builds', module='jirasupport', version='1.0.32-SNAPSHOT')
 @Grab(group='com.gotomeeting.builds', module='sonatypesupport', version='1.0.1-SNAPSHOT')
+//@groovy.lang.GrabConfig(SystemClas)
 import com.gotomeeting.sonatypesupport.*
 import com.gotomeeting.jirasupport.*
 
 def call() {
     JiraSupport jiraSupport = new JiraSupport("qw", "qw", "qw")
     echo "Jira"
-    //SonaTypeSupport sonaTypeSupport = new SonaTypeSupport(ACCESS_USR, ACCESS_PSW, SONA_URL)
+    SonaTypeSupport sonaTypeSupport = new SonaTypeSupport("qw", "qw", "qw")
     echo "libraries are imported successfully"
 }
