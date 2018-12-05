@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca35f8c7-04fb-44f9-86d6-0c40ef518c58" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/vars/assignIssue.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/assignIssue.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/checkCritical.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/checkCritical.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/createDeployment.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createDeployment.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/createRelease.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createRelease.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/createSubTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createSubTask.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/createTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/createTask.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/grab.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/grab.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/releaseRelease.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/releaseRelease.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/resolveTask.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/resolveTask.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vars/sonaTypeCheck.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/vars/sonaTypeCheck.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createTask.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createTask.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vars/createTask.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -107,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDeployment.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vars/createDeployment.groovy">
+      <file leaf-file-name="Jenkinsfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="104" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
+            <state relative-caret-position="288">
+              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -134,7 +125,6 @@
         <option value="$PROJECT_DIR$/src/JIraSupport.groovy" />
         <option value="$PROJECT_DIR$/src/vars/йц.groovy" />
         <option value="$PROJECT_DIR$/vars/qw.groovy" />
-        <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/SharedLibrary.iml" />
         <option value="$PROJECT_DIR$/vars/assignIssue.groovy" />
         <option value="$PROJECT_DIR$/vars/checkCritical.groovy" />
@@ -146,6 +136,7 @@
         <option value="$PROJECT_DIR$/vars/releaseRelease.groovy" />
         <option value="$PROJECT_DIR$/vars/resolveTask.groovy" />
         <option value="$PROJECT_DIR$/vars/sonaTypeCheck.groovy" />
+        <option value="$PROJECT_DIR$/Jenkinsfile" />
       </list>
     </option>
   </component>
@@ -287,15 +278,16 @@
       <option name="presentableId" value="Default" />
       <updated>1543843708762</updated>
       <workItem from="1543843710388" duration="15093000" />
-      <workItem from="1544028794123" duration="2213000" />
+      <workItem from="1544028794123" duration="3092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17306000" />
+    <option name="totallyTimeSpent" value="18185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -447,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1818">
-          <caret line="101" column="43" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vars/createDeployment.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -524,6 +509,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="75" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkinsfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
         </state>
       </provider>
     </entry>
