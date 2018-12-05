@@ -8,6 +8,7 @@ import com.gotomeeting.jirasupport.*
 
 def call() {
     JiraSupport jiraSupport = new JiraSupport("qw", "qw", "qw")
+    echo "Jira"
     SonaTypeSupport sonaTypeSupport = new SonaTypeSupport(ACCESS_USR, ACCESS_PSW, SONA_URL)
     echo "libraries are imported successfully"
 }
