@@ -6,8 +6,4 @@ import com.gotomeeting.jirasupport.*
 
 @NonCPS
 def call() {
-    JiraSupport jiraSupport = new JiraSupport("qw", "qw", "qw")
-    echo "Jira"
-    SonaTypeSupport sonaTypeSupport = new SonaTypeSupport("qw", "qw", "qw")
-    echo "libraries are imported successfully"
 }
