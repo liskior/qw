@@ -1,5 +1,3 @@
-package vars
-
 import com.gotomeeting.jirasupport.*
 
 @NonCPS
