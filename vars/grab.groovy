@@ -7,6 +7,7 @@ package vars
 import com.gotomeeting.sonatypesupport.*
 import com.gotomeeting.jirasupport.*
 
+@NonCPS
 def call() {
     JiraSupport jiraSupport = new JiraSupport("qw", "qw", "qw")
     echo "Jira"
