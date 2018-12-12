@@ -6,4 +6,5 @@ import com.gotomeeting.jirasupport.*
 
 @NonCPS
 def call() {
+    echo "40"
 }
