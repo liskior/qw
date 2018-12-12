@@ -23,7 +23,7 @@ def jenkinsBuild(String url) {
         while (res == null) {
             get = new URL(status_url).openConnection()
             get.setDoOutput(true)
-            get.setRequestProperty("Authorization", "Basic ${authString}")
+            //get.setRequestProperty("Authorization", "Basic ${authString}")
             def getRC = get.getResponseCode()
             println("Status " + getRC)
             if (getRC != 200) {
