@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca35f8c7-04fb-44f9-86d6-0c40ef518c58" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SharedLibrary.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SharedLibrary.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="grab.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vars/grab.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state relative-caret-position="36">
+              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -180,10 +179,6 @@
               <item name="SharedLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="vars" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SharedLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -279,12 +274,12 @@
       <workItem from="1544028794123" duration="3092000" />
       <workItem from="1544032122927" duration="59000" />
       <workItem from="1544457527624" duration="1126000" />
-      <workItem from="1544625275875" duration="1277000" />
+      <workItem from="1544625275875" duration="1534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20647000" />
+    <option name="totallyTimeSpent" value="20904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1176" extended-state="7" />
@@ -304,7 +299,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Jenkins" order="3" weight="0.32995737" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -669,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vars/grab.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="36">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
