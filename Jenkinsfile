@@ -14,7 +14,7 @@ def jenkinsBuild(String url) {
         post.setDoOutput(true)
         def postRC = post.getResponseCode()
         println("Status " + postRC)
-        if (postRC == 401) {
+        if (postRC == 404) {
             def object = post.errorStream.getText()
             println(object)
         }
@@ -26,7 +26,7 @@ def jenkinsBuild(String url) {
             get.setRequestProperty("Authorization", "Basic ${authString}")
             def getRC = get.getResponseCode()
             println("Status " + getRC)
-            if (getRC == 403) {
+            if (getRC == 404) {
                 def object = get.errorStream.getText()
                 println(object)
             }
