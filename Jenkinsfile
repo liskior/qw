@@ -29,6 +29,7 @@ def jenkinsBuild(String url) {
             if (getRC != 200) {
                 def object = get.errorStream.getText()
                 println(object)
+                continue
             }
             def jsonSlurper = new JsonSlurper()
             def object = jsonSlurper.parseText(get.getInputStream().getText())
@@ -36,7 +37,7 @@ def jenkinsBuild(String url) {
             res = object.result
             Thread.sleep(10000)
         }
-        if (!res.equals("SUCCESS")) {
+        if (!res.equals("SUCCESS") && res != null) {
             def mes = input message: "repeat?", parameters: [choice(name: "answer", choices: "skip")]
             if (mes.equals("skip")) break
         }
