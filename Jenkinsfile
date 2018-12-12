@@ -5,7 +5,7 @@ import groovy.json.JsonSlurper
 @NonCPS
 def jenkinsBuild(String url) {
     while (true) {
-        def jenkins_url = url + "buildWithParameters"
+        def jenkins_url = url + "build"
         def status_url = url + "lastBuild/api/json"
         def authString = "$ACCESS_USR:$ACCESS_PSW".getBytes().encodeBase64().toString()
         def post = new URL(jenkins_url).openConnection()
