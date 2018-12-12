@@ -26,7 +26,7 @@ def jenkinsBuild(String url) {
             get.setRequestProperty("Authorization", "Basic ${authString}")
             def getRC = get.getResponseCode()
             println("Status " + getRC)
-            if (getRC == 200) {
+            if (getRC != 200) {
                 def object = get.errorStream.getText()
                 println(object)
             }
