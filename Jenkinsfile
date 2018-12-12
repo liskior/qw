@@ -10,11 +10,14 @@ def jenkinsBuild(String url) {
         def authString = "$ACCESS_USR:$ACCESS_PSW".getBytes().encodeBase64().toString()
         def post = new URL(jenkins_url).openConnection()
         post.setRequestMethod("POST")
-        post.setRequestProperty("Authorization", "Basic ${authString}")
+
         post.setDoOutput(true)
         def postRC = post.getResponseCode()
         println("Status " + postRC)
         if (postRC != 200) {
+            post.setRequestProperty("Authorization", "Basic ${authString}")
+            postRC = post.getResponseCode()
+            if (postRC == 200) break
             def object = post.errorStream.getText()
             println(object)
         }
