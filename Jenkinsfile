@@ -46,7 +46,7 @@ def jenkinsBuild(String url) {
 
 
 pipeline {
-    agent any
+    //agent any
     agent {
         label 'rhel6'
     }
