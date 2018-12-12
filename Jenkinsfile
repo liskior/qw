@@ -14,10 +14,10 @@ def jenkinsBuild(String url) {
         post.setDoOutput(true)
         def postRC = post.getResponseCode()
         println("Status " + postRC)
-        if (postRC != 200) {
+        if (postRC != 200 && postRC != 201) {
             post.setRequestProperty("Authorization", "Basic ${authString}")
             postRC = post.getResponseCode()
-            if (postRC == 200) break
+            if (postRC == 200 || postRC != 201) break
             def object = post.errorStream.getText()
             println(object)
         }
