@@ -8,6 +8,7 @@ def jenkinsBuild(String url) {
         def jenkins_url = url + "build"
         def status_url = url + "lastBuild/api/json"
         def authString = "$ACCESS_USR:$ACCESS_PSW".getBytes().encodeBase64().toString()
+
         def post = new URL(jenkins_url).openConnection()
         post.setRequestMethod("POST")
 
@@ -44,7 +45,9 @@ def jenkinsBuild(String url) {
             def mes = input message: "repeat?", parameters: [choice(name: "answer", choices: "skip")]
             if (mes.equals("skip")) break
         }
-        else return
+        else {
+            return
+        }
     }
 }
 
