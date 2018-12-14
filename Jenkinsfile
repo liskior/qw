@@ -44,8 +44,8 @@ def jenkinsBuild(String url) {
         if (!res.equals("SUCCESS")) {
             def mes = input message: "repeat?", parameters: [choice(name: "answer", choices: "skip\nrepeat")]
             if (mes.equals("skip")) break
-            else continue
         }
+        else break
     }
 }
 
