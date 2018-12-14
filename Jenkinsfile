@@ -42,7 +42,7 @@ def jenkinsBuild(String url) {
             Thread.sleep(10000)
         }
         if (!res.equals("SUCCESS") && res != null) {
-            def mes = input message: "repeat?", parameters: [choice(name: "answer", choices: "skip, repeat")]
+            def mes = input message: "repeat?", parameters: [choice(name: "answer", choices: "skip\nrepeat")]
             if (mes.equals("skip")) break
         }
         else {
