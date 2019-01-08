@@ -78,7 +78,11 @@ pipeline {
     stages {
         stage('grab') {
             steps {
-                grab()
+                try {
+                    grab()
+                } catch (Exception e) {
+                    echo e.message
+                }
             }
         }
         stage('Create Release Ticket') {

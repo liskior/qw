@@ -4,6 +4,6 @@
 import com.gotomeeting.sonatypesupport.*
 import com.gotomeeting.jirasupport.*
 
-//@NonCPS
+@NonCPS
 def call() {
 }
