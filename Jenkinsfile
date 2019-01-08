@@ -52,9 +52,9 @@ def jenkinsBuild(String url) {
 
 pipeline {
     agent any
-    /*agent {
-        label 'rhel6'
-    }*/
+    agent {
+        label 'Windows-0104071503-3'
+    }
     environment {
         ACCESS = credentials('akryzhanovskaya')
         JIRA_URL = "https://devjira.ops.expertcity.com/"
