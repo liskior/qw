@@ -78,10 +78,12 @@ pipeline {
     stages {
         stage('grab') {
             steps {
-                try {
-                    grab()
-                } catch (Exception e) {
-                    echo e.message
+                script {
+                    try {
+                        grab()
+                    } catch (Exception e) {
+                        echo e.message
+                    }
                 }
             }
         }
