@@ -56,7 +56,7 @@ pipeline {
         label 'Windows-0104071503-3'
     }
     environment {
-        ACCESS = credentials('d0829884-fbd3-400c-9275-a392a8ad4c6e')
+        ACCESS = credentials('akryzhanovskaya')
         JIRA_URL = "https://devjira.ops.expertcity.com/"
         SONA_URL = "https://nexus.getgotools.net"
     }
