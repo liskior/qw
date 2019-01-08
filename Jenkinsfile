@@ -1,4 +1,4 @@
-//@Library('qw')_
+@Library('qw')_
 
 import groovy.json.JsonSlurper
 
