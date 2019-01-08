@@ -51,7 +51,7 @@ def jenkinsBuild(String url) {
 
 
 pipeline {
-    agent any
+    //agent any
     agent {
         label 'Windows-0104071503-3'
     }
